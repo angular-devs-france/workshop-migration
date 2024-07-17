@@ -1,0 +1,9 @@
+<div role="search">
+  <input type="text" placeholder="Search" [formControl]="searchControl">
+</div>
+
+<ul>
+  <li *ngFor="let event of filteredEvents | async" routerLink="foo">
+    {{event.title}}
+  </li>
+</ul>
