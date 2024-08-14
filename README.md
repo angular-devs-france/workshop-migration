@@ -39,7 +39,7 @@ Use one of the following online IDE to get rid of potential issues with your loc
       src="https://cdn.idx.dev/btn/open_purple_32.svg">
   </picture>
 </a></td>
-      <td><a href="https://stackblitz.com/github/angular-devs-france/workshop-migration">
+      <td><a href="https://stackblitz.com/fork/angular-devs-france/workshop-migration">
   <img
     alt="Open in StackBlitz"
     src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
