@@ -1,8 +1,31 @@
 # Angular Workshop migration
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/angular-devs-france/workshop-migration)
+# Run the project
 
-<a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Fangular-devs-france%2Fworkshop-migration">
+## Recommanded solution
+
+Use one of the following online IDE to get rid of potential issues with your local environment:
+
+<table>
+  <thead>
+    <tr>
+      <th>Gitpod</th>
+      <th>IDX</th>
+      <th>StackBlitz</th>
+      <th>GitHub Codespaces</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<a href="https://gitpod.io/#https://github.com/angular-devs-france/workshop-migration">
+  <img
+    alt="Open in Gitpod"
+    src="https://gitpod.io/button/open-in-gitpod.svg"
+  />
+</a>
+</td>
+      <td><a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Fangular-devs-france%2Fworkshop-migration">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -15,13 +38,35 @@
       alt="Open in IDX"
       src="https://cdn.idx.dev/btn/open_purple_32.svg">
   </picture>
-</a>
-
-<a href="https://stackblitz.com/github/angular-devs-france/workshop-migration">
+</a></td>
+      <td><a href="https://stackblitz.com/github/angular-devs-france/workshop-migration">
   <img
     alt="Open in StackBlitz"
     src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
   />
-</a>
+</a></td>
+      <td><a href='https://codespaces.new/angular-devs-france/workshop-migration'><img src='https://github.com/codespaces/badge.svg' alt='Open in GitHub Codespaces' style='max-width: 100%;'></a>
+</td>
+    </tr>
+  </tbody>
+</table>
 
-<a href='https://codespaces.new/angular-devs-france/workshop-migration'><img src='https://github.com/codespaces/badge.svg' alt='Open in GitHub Codespaces' style='max-width: 100%;'></a>
+
+## Manuel solution
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [Angular CLI](https://angular.io/cli)
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+ng serve
+```
