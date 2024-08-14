@@ -18,7 +18,7 @@ Use one of the following online IDE to get rid of potential issues with your loc
   <tbody>
     <tr>
       <td>
-<a href="https://gitpod.io/#https://github.com/angular-devs-france/workshop-migration">
+<a href="https://gitpod.io/from-referrer/">
   <img
     alt="Open in Gitpod"
     src="https://gitpod.io/button/open-in-gitpod.svg"
