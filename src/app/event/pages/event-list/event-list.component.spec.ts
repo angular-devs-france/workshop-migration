@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventListComponent } from './event-list.component';
+import {HttpClientTestingModule, provideHttpClientTesting} from "@angular/common/http/testing";
+import {provideHttpClient} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 describe('EventListComponent', () => {
   let component: EventListComponent;
@@ -8,7 +11,8 @@ describe('EventListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EventListComponent]
+      declarations: [EventListComponent],
+      imports: [HttpClientTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
 
