@@ -1,17 +1,37 @@
 import { TestBed } from '@angular/core/testing';
-import { ResolveFn } from '@angular/router';
+import {ActivatedRouteSnapshot} from '@angular/router';
 
-import { eventResolver } from './event.resolver';
+import {EventResolver} from './event.resolver';
+import {provideHttpClientTesting} from "@angular/common/http/testing";
+import {Injectable} from "@angular/core";
+import {Observable, of} from "rxjs";
+import {CommunityEvent} from "../models/community-event.model";
+
+@Injectable()
+export class MockService {
+  getEvent(id: string): Observable<CommunityEvent> {
+    return of({ id: 1, name: 'test' });
+  }
+}
 
 describe('eventResolver', () => {
-  const executeResolver: ResolveFn<boolean> = (...resolverParameters) => 
-      TestBed.runInInjectionContext(() => eventResolver(...resolverParameters));
+  let eventResolver: EventResolver;
+  let route = new ActivatedRouteSnapshot();
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        EventResolver,
+        provideHttpClientTesting(),
+      ]
+    });
+
+    eventResolver = TestBed.inject(EventResolver);
   });
 
   it('should be created', () => {
-    expect(executeResolver).toBeTruthy();
+    route.params = { id: 1 };
+
+    eventResolver.resolve()
   });
 });

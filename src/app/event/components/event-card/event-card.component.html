@@ -1,1 +1,16 @@
-<p>event-card works!</p>
+<a [routerLink]="event.id" class="flex flex-col sm:flex-row justify-between shadow-2xl rounded-2xl p-3 mb-4 gap-4 sm:gap-2 min-w-[800px]"
+   aria-labelledby="title">
+  <div class="flex flex-row sm:flex-col gap-2">
+    <div
+      class="rounded-2xl bg-neutral-300 p-2 sm:p-4 flex justify-center items-center gap-4 min-w-[50px] sm:min-w-[180px] w-full">
+      <div class="uppercase">{{ event.date | date: 'shortDate' }}</div>
+    </div>
+    <div class="rounded-2xl bg-[#383e97] p-2 sm:p-4 flex flex-col justify-center items-center w-full">
+      <div class="font-bold text-white uppercase">{{ event.type }}</div>
+    </div>
+  </div>
+  <div class="px-4 flex-1">
+    <h3 id="title" class="font-bold text-2xl">{{ event.title }}</h3>
+    <div>{{ event.title }}</div>
+  </div>
+</a>

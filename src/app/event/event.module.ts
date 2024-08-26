@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {EventRoutingModule} from "./event-routing.module";
 import { EventListComponent } from './pages/event-list/event-list.component';
 import {ReactiveFormsModule} from "@angular/forms";
@@ -12,10 +12,11 @@ import { EventCardComponent } from './components/event-card/event-card.component
     EventItemComponent,
     EventCardComponent
   ],
-  imports: [
-    CommonModule,
-    EventRoutingModule,
-    ReactiveFormsModule
-  ]
+    imports: [
+        CommonModule,
+        EventRoutingModule,
+        ReactiveFormsModule,
+        NgOptimizedImage
+    ]
 })
 export class EventModule { }

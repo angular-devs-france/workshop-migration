@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {CommunityEvent} from "../../models/community-event.model";
 
 @Component({
@@ -8,5 +8,4 @@ import {CommunityEvent} from "../../models/community-event.model";
 })
 export class EventCardComponent {
   @Input() event!: CommunityEvent;
-  @Output() favorite = new EventEmitter<void>();
 }
