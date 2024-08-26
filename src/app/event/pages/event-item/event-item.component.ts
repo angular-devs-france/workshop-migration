@@ -6,7 +6,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-event-item',
   templateUrl: './event-item.component.html',
-  styleUrl: './event-item.component.css'
 })
 export class EventItemComponent {
   route = inject(ActivatedRoute);
