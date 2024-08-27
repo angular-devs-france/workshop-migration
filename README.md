@@ -46,11 +46,11 @@ TODO: résumé du cours
 ### Mise en pratique
 
 1. Migrer le composant `EventList` en standalone
-2. Appliquer la migration automatique avec la schematics : 
-- `ng g @angular/core:standalone --path ./ --mode convert-to-standalone` pour "Convert all components, directives and pipes to standalone"
-- `ng g @angular/core:standalone --path ./ --mode prune-ng-modules` pour "Remove unnecessary NgModule classes"
-- `ng g @angular/core:standalone --path ./ --mode standalone-bootstrap` pour "Bootstrap the project using standalone APIs"
-3. Vérifier que tout compile bien et qu'il n'y a plus de `NgModule`
+2. Appliquer la migration automatique avec les schematics suivantes : 
+- `ng g @angular/core:standalone --path ./ --mode convert-to-standalone` pour "Convertir les components, directives et pipes en standalone"
+- `ng g @angular/core:standalone --path ./ --mode prune-ng-modules` pour "Supprimer les  classes NgModule inutiles"
+- `ng g @angular/core:standalone --path ./ --mode standalone-bootstrap` pour "Bootstrap le projet en utilisant la standalone APIs"
+3. Vérifier que tout compile bien, que les tests passent toujours et qu'il n'y a plus de `NgModule`
 
 ---
 
@@ -62,6 +62,7 @@ TODO: résumé du cours
 
 1. Passer toutes les injections de dépendances dans un constructeur avec la nouvelle méthode `inject()`
 2. Migrer le resolver existant `EventResolver` en Functionnal Resolver 
+3. Vérifier que tout compile bien et que les tests passent toujours
 
 ---
 
@@ -74,8 +75,8 @@ TODO: résumé du cours
 1. Dans le composant `EventList` remplacer la boucle sur `filteredEvents` avec la directive *ngFor en @for
 2. Ajouter un message si la liste `filteredEvents` est vide 
 3. Appliquer la migration automatique avec la schematics : 
-- `ng g @angular/core:control-flow` 
-3. Vérifier que tout compile bien et qu'il n'y a pas d'imports inutiles
+- `ng g @angular/core:control-flow --path ./ --format true` 
+4. Vérifier que tout compile bien, que les tests passent toujours et qu'il n'y a pas d'imports inutiles
 
 ---
 
