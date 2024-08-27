@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {EventService} from "../../event.service";
 import {debounceTime, startWith, switchMap} from "rxjs";
+
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',

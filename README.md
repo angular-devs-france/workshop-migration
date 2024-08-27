@@ -74,7 +74,7 @@ TODO: résumé du cours
 1. Dans le composant `EventList` remplacer la boucle sur `filteredEvents` avec la directive *ngFor en @for
 2. Ajouter un message si la liste `filteredEvents` est vide 
 3. Appliquer la migration automatique avec la schematics : 
-- `ng g @angular/core:control-flows` 
+- `ng g @angular/core:control-flow` 
 3. Vérifier que tout compile bien et qu'il n'y a pas d'imports inutiles
 
 ---
