@@ -47,9 +47,9 @@ TODO: résumé du cours
 
 1. Migrer le composant `EventList` en standalone
 2. Appliquer la migration automatique avec la schematics : 
-- `ng g @angular/core:standalone` et sélectionner "Convert all components, directives and pipes to standalone"
-- `ng g @angular/core:standalone` et sélectionner "Remove unnecessary NgModule classes"
-- `ng g @angular/core:standalone` et sélectionner "Bootstrap the project using standalone APIs"
+- `ng g @angular/core:standalone --path ./ --mode convert-to-standalone` pour "Convert all components, directives and pipes to standalone"
+- `ng g @angular/core:standalone --path ./ --mode prune-ng-modules` pour "Remove unnecessary NgModule classes"
+- `ng g @angular/core:standalone --path ./ --mode standalone-bootstrap` pour "Bootstrap the project using standalone APIs"
 3. Vérifier que tout compile bien et qu'il n'y a plus de `NgModule`
 
 ---

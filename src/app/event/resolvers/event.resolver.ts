@@ -23,6 +23,6 @@ export class EventResolver implements Resolve<Observable<CommunityEvent>> {
         }
         return EMPTY;
       })
-    )
+    );
   }
 }
