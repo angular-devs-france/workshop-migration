@@ -1,0 +1,21 @@
+<div class="todo-app p-4 max-w-md mx-auto bg-base-200 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold text-center mb-4">Angular Signals To-Do List</h2>
+
+  <div class="todo-input flex gap-2 mb-4">
+    <input #todoText type="text" placeholder="Add a new task..." class="input input-bordered w-full" />
+    <button class="btn btn-primary" (click)="addTodo(todoText.value); todoText.value = '';">Add</button>
+  </div>
+
+  <div class="todo-filter flex justify-center gap-2 mb-4">
+    <button class="btn btn-sm" [class.btn-active]="filter === 'all'" (click)="changeFilter('all')">All</button>
+    <button class="btn btn-sm" [class.btn-active]="filter === 'active'" (click)="changeFilter('active')">Active</button>
+    <button class="btn btn-sm" [class.btn-active]="filter === 'completed'" (click)="changeFilter('completed')">Completed</button>
+  </div>
+
+  <ul class="todo-list list-none p-0">
+    <li *ngFor="let todo of filteredTodos" class="flex items-center gap-2 mb-2">
+      <input type="checkbox" class="checkbox" [checked]="todo.completed" (change)="toggleTodoCompletion(todo.id)" />
+      <span [class.font-bold]="isAboutAngular(todo)" [class.line-through]="todo.completed" [class.text-gray-500]="todo.completed">{{ todo.text }}</span>
+    </li>
+  </ul>
+</div>

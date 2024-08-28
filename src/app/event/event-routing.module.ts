@@ -10,7 +10,7 @@ const routes: Routes = [
     component: EventListComponent
   },
   {
-    path: ':id',
+    path: 'event/:id',
     component: EventItemComponent,
     resolve: {
       event: EventResolver

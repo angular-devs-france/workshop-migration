@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./event/event.module').then(m => m.EventModule)
   },
   {
+    path: 'todo',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }

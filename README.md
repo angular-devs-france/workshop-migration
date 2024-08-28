@@ -100,3 +100,6 @@ TODO: résumé du cours
 1. Dans le composant `EventList` utiliser les `Signal`
 
 ---
+
+
+// TODO : extends pour hostdirectives
