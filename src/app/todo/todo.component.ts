@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+type Filter = 'all' | 'completed' | 'active';
+
 
 interface Todo {
   id: number;
@@ -18,7 +20,7 @@ export class TodoComponent {
     { id: 2, text: 'Write a Blog Post', completed: false },
   ];
 
-  filter: string = 'all';
+  filter: Filter = 'all';
 
   get filteredTodos(): Todo[] {
     if (this.filter === 'completed') {
@@ -47,7 +49,7 @@ export class TodoComponent {
     );
   }
 
-  changeFilter(newFilter: string) {
+  changeFilter(newFilter: Filter) {
     this.filter = newFilter;
   }
 
