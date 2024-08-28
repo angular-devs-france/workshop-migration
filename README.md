@@ -39,7 +39,7 @@ Vous allez donc coder les nouvelles features directement sur un site en Angular 
 
 ---
 
-## Standalone Component 
+## Standalone Component (10 min)
 
 TODO: résumé du cours 
 
@@ -54,7 +54,7 @@ TODO: résumé du cours
 
 ---
 
-## Functionnal Guard/Resolver
+## Functionnal Guard/Resolver (10 min)
 
 TODO: résumé du cours 
 
@@ -66,7 +66,7 @@ TODO: résumé du cours
 
 ---
 
-## Built-in Control Flow
+## Built-in Control Flow (15 min)
 
 TODO: résumé du cours 
 
@@ -80,25 +80,26 @@ TODO: résumé du cours
 
 ---
 
-## Deferrable View
+## Deferrable View (10 min)
 
 TODO: résumé du cours 
 
 ### Mise en pratique
 
 1. Ajouter defer sur l'iframe youtube dans le composant `EventItem`
-2. Ajouter un placeholder: "Replay"
-3.  Afficher l'iframe au hover sur le placeholder
+2. Ajouter un message "replay" de placeholder
+3. Afficher l'iframe au hover sur le placeholder
 
 ---
 
-## Signal
+## Signal (20 min)
 
 TODO: résumé du cours
 
 ### Mise en pratique
 
-1. Changer les propriétés du composant `TodoComponent` en Signals
-2. Adapter les fonctions pour mettre à jour la liste et la vue
+1. Changer les propriétés `todos` et `filter` du composant `TodoComponent` en Signals
+2. Adapter les fonctions `filteredTodos`, `addTodo`, `toggleTodoCompletion` et `changeFilter` pour mettre à jour la liste et la vue
+3. Utiliser @let pour remplacer la fonction `isAboutAngular`
 
 ---
