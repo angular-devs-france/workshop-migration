@@ -4,9 +4,15 @@
     <img ngSrc="/search-icon.svg" alt="search" class="w-4 h-4" height="16" width="16"/>
   </label>
 
-  <ul>
-    <li *ngFor="let event of filteredEvents | async">
-          <app-event-card [event]="event"/>
-    </li>
-  </ul>
+  <ng-container *ngIf="filteredEvents | async as events; else loading">
+    <ul>
+      <li *ngFor="let event of events">
+        <app-event-card [event]="event"/>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
 </div>
