@@ -5,11 +5,11 @@ import {NotFoundComponent} from "./shared/components/not-found/not-found.compone
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./event/event.module').then(m => m.EventModule)
+    loadChildren: () => import('./features/event/event.module').then(m => m.EventModule)
   },
   {
     path: 'todo',
-    loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
+    loadChildren: () => import('./features/todo/todo.module').then(m => m.TodoModule)
   },
   {
     path: '**',
