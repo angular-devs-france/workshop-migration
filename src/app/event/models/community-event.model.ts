@@ -6,4 +6,6 @@ export type CommunityEvent = {
   imageUrl: string;
   invitees: string[];
   youtubeUrl: string;
+  location?: string;
+  speaker?: string;
 }

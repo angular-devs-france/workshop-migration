@@ -10,7 +10,7 @@ import { EventCardComponent } from './components/event-card/event-card.component
   declarations: [
     EventListComponent,
     EventItemComponent,
-    EventCardComponent
+    EventCardComponent,
   ],
     imports: [
         CommonModule,
