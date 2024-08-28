@@ -86,20 +86,19 @@ TODO: résumé du cours
 
 ### Mise en pratique
 
-1. Remplacer le @if par un bloc @defer
-2. Vérifier dans le network que l'appel est bien déclenché après
+1. Ajouter defer sur l'iframe youtube dans le composant `EventItem`
+2. Ajouter un placeholder: "Replay"
+3.  Afficher l'iframe au hover sur le placeholder
 
 ---
 
 ## Signal
 
-TODO: résumé du cours 
+TODO: résumé du cours
 
 ### Mise en pratique
 
-1. Dans le composant `EventList` utiliser les `Signal`
+1. Changer les propriétés du composant `TodoComponent` en Signals
+2. Adapter les fonctions pour mettre à jour la liste et la vue
 
 ---
-
-
-// TODO : extends pour hostdirectives
