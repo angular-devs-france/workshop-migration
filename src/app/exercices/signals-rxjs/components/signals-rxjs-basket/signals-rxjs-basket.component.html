@@ -1,0 +1,8 @@
+@if (basket$ | async; as basket) {
+  <ul>
+    @for (item of basket; track item.id) {
+      <li>{{item}}</li>
+    }
+  </ul>
+  <div>{{computeTotalCost(basket)}}</div>
+}
