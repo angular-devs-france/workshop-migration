@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {NotFoundComponent} from "./shared/components/not-found/not-found.component";
+import {HomeComponent} from "./technical/home/home.component";
+import {AuthGuard} from "./exercices/functional-guard/auth.guard";
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./features/event/event.module').then(m => m.EventModule)
+    component: HomeComponent,
   },
   {
-    path: 'todo',
-    loadChildren: () => import('./features/todo/todo.module').then(m => m.TodoModule)
+    path: 'standalone',
+    loadChildren: () => import('./exercices/standalone/standalone.module').then(m => m.StandaloneModule)
   },
   {
-    path: '**',
-    component: NotFoundComponent
+    path: 'control-flow',
+    loadComponent: () => import('./exercices/control-flow/control-flow.component').then(m => m.ControlFlowComponent)
+  },
+  {
+    path: 'signals-introduction',
+    loadComponent: () => import('./exercices/signals-introduction/signals-introduction.component').then(m => m.SignalsIntroductionComponent)
+  },
+  {
+    path: 'functional-guard',
+    loadComponent: () => import('./exercices/functional-guard/functional-guard.component').then(m => m.FunctionalGuardComponent),
+    canActivate: [AuthGuard],
   }
 ];
 
