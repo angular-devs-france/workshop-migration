@@ -5,11 +5,10 @@
 
 <ng-container *ngIf="list$ | async as list">
   <ng-container *ngIf="list.length; else emptyList">
-    <ul>
-      <li *ngFor="let item of list$ | async">{{ item.name }}</li>
-    </ul>
+    <div *ngFor="let item of list$ | async">{{ item.name }}</div>
   </ng-container>
 </ng-container>
+
 <ng-template #emptyList>
   Pas de résultats
 </ng-template>

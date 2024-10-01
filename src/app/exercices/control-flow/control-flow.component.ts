@@ -22,10 +22,10 @@ import {MatInput} from "@angular/material/input";
   standalone: true
 })
 export class ControlFlowComponent {
-  readonly #service = inject(ControlFlowService);
+  private service = inject(ControlFlowService);
   searchControl = new FormControl<string>('', {nonNullable: true});
 
   list$ = this.searchControl.valueChanges.pipe(
-    switchMap(value => this.#service.search(value))
+    switchMap(value => this.service.search(value))
   );
 }
