@@ -18,6 +18,10 @@ const routes: Routes = [
     loadComponent: () => import('./exercices/control-flow/control-flow.component').then(c => c.ControlFlowComponent)
   },
   {
+    path: 'control-flow-switch',
+    loadComponent: () => import('./exercices/control-flow-switch/login-status.component').then(c => c.LoginStatusComponent)
+  },
+  {
     path: 'signals-introduction',
     loadComponent: () => import('./exercices/signals-introduction/signals-introduction.component').then(c => c.SignalsIntroductionComponent)
   },
