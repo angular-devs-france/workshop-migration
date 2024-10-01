@@ -19,7 +19,12 @@ import {MatInput} from "@angular/material/input";
     MatInput,
     MatLabel
   ],
-  standalone: true
+  standalone: true,
+  styles: [`
+    :host {
+      @apply flex flex-col;
+    }
+  `]
 })
 export class ControlFlowComponent {
   private service = inject(ControlFlowService);

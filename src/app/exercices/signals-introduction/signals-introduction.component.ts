@@ -8,7 +8,15 @@ import {MatButton} from "@angular/material/button";
     MatButton
   ],
   templateUrl: './signals-introduction.component.html',
-  styleUrl: './signals-introduction.component.css'
+  styles: [`
+    :host {
+      @apply flex flex-col items-center gap-4;
+    }
+
+    button {
+      @apply min-w-32;
+    }
+  `]
 })
 export class SignalsIntroductionComponent {
   count = 0;
