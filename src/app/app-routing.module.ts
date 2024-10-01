@@ -26,6 +26,10 @@ const routes: Routes = [
     loadComponent: () => import('./exercices/signals-introduction/signals-introduction.component').then(c => c.SignalsIntroductionComponent)
   },
   {
+    path: 'signals-state',
+    loadChildren: () => import('./exercices/signals-state/signals-state.routes').then(r => r.ROUTES)
+  },
+  {
     path: 'functional-guard',
     loadComponent: () => import('./exercices/functional-guard/functional-guard.component').then(c => c.FunctionalGuardComponent),
     canActivate: [AuthGuard],
