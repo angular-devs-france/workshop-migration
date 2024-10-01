@@ -11,7 +11,11 @@ export class ControlFlowService {
     return of([
       {id: 1, name: 'foo', price: 30}
     ]).pipe(
-      map(data => data.filter(x => x.name.toLowerCase().includes(searchTerm.toLowerCase())))
+      map(data =>
+        searchTerm.length
+          ? data.filter(x => x.name.toLowerCase().includes(searchTerm.toLowerCase()))
+          : []
+      )
     );
   }
 }

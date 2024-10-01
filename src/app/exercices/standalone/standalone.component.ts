@@ -3,8 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-standalone',
-  templateUrl: './standalone.component.html',
-  styleUrl: './standalone.component.css',
+  templateUrl: './standalone.component.html'
 })
 export class StandaloneComponent {
   form = new FormGroup({
