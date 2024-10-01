@@ -12,7 +12,7 @@ export const ROUTES: Routes = [
       },
       {
         path: 'cart',
-        loadComponent: () => import('./components/basket/basket.component')
+        loadComponent: () => import('./components/cart/cart.component')
       }
     ]
   },

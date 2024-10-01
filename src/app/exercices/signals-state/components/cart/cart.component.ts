@@ -5,15 +5,15 @@ import {MatButton} from "@angular/material/button";
 import {Product} from "../../models/product.model";
 
 @Component({
-  selector: 'app-basket',
+  selector: 'app-cart',
   standalone: true,
   imports: [
     AsyncPipe,
     MatButton
   ],
-  templateUrl: './basket.component.html'
+  templateUrl: './cart.component.html'
 })
-export default class BasketComponent {
+export default class CartComponent {
   private cartService = inject(CartService);
   cart$ = this.cartService.cart$;
 
