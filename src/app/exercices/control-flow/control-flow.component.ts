@@ -9,7 +9,6 @@ import {MatInput} from "@angular/material/input";
 @Component({
   selector: 'app-control-flow',
   templateUrl: './control-flow.component.html',
-  styleUrl: './control-flow.component.css',
   imports: [
     AsyncPipe,
     ReactiveFormsModule,

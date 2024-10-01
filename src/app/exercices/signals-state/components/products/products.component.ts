@@ -18,10 +18,11 @@ import {MatButton} from "@angular/material/button";
 export default class ProductsComponent {
   private cartService = inject(CartService);
   products: Product[] = [
-    { id: 1, name: 'Product 1', price: 123 },
-    { id: 2, name: 'Product 2', price: 456 },
-    { id: 3, name: 'Product 3', price: 789 },
-    { id: 4, name: 'Product 4', price: 789 },
+    {id: 1, name: 'Bananes', price: 30},
+    {id: 2, name: 'Tomates', price: 20},
+    {id: 3, name: 'Fraises', price: 20},
+    {id: 4, name: 'Orange', price: 10},
+    {id: 5, name: 'Pomme', price: 5},
   ];
 
   add(product: Product): void {

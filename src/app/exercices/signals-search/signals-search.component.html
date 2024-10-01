@@ -1,1 +1,12 @@
-<p>signals-search works!</p>
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput type="text" [formControl]="searchControl">
+</mat-form-field>
+
+@if(list$ | async; as list) {
+  @for(item of list; track item.id) {
+    <div>{{ item.name }}</div>
+  } @empty {
+    Pas de résultats
+  }
+}

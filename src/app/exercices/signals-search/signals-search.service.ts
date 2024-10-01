@@ -5,7 +5,7 @@ import {Product} from "../signals-state/models/product.model";
 @Injectable({
   providedIn: 'root'
 })
-export class ControlFlowService {
+export class SignalsSearchService {
 
   search(searchTerm: string): Observable<Product[]> {
     return of([
