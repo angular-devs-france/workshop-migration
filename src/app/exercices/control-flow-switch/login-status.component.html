@@ -1,0 +1,21 @@
+<div [ngSwitch]="loginStatus">
+  <div *ngSwitchCase="'loggedIn'">
+    <h2>Welcome, User!</h2>
+    <p>You are now logged in.</p>
+  </div>
+
+  <div *ngSwitchCase="'loggedOut'">
+    <h2>Please Log In</h2>
+    <p>You are currently logged out. Please log in to continue.</p>
+  </div>
+
+  <div *ngSwitchCase="'loading'">
+    <h2>Loading...</h2>
+    <p>Checking your login status. Please wait.</p>
+  </div>
+
+  <div *ngSwitchDefault>
+    <h2>Error</h2>
+    <p>Something went wrong. Please try again later.</p>
+  </div>
+</div>

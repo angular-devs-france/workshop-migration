@@ -1,0 +1,14 @@
+<form [formGroup]="form" class="flex flex-col">
+  <mat-form-field>
+    <mat-label>Dans quelle version les Standalone sont devenus stable?</mat-label>
+    <mat-select formControlName="version">
+      <mat-option>15</mat-option>
+      <mat-option>16</mat-option>
+      <mat-option>17</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Partagez votre expérience avec cet exercice</mat-label>
+    <input matInput type="text" formControlName="review"/>
+  </mat-form-field>
+</form>

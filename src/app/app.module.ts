@@ -4,19 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule // TODO when deprecated
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

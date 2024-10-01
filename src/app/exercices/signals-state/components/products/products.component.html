@@ -1,0 +1,12 @@
+<ul class="flex flex-col gap-4">
+  @for(product of products; track product.id) {
+    <li>
+      <mat-card>
+        <mat-card-header>{{product.name}}</mat-card-header>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary" (click)="add(product)">Add</button>
+        </mat-card-actions>
+      </mat-card>
+    </li>
+  }
+</ul>

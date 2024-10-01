@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput type="text" [formControl]="searchControl">
+</mat-form-field>
+
+<ng-container *ngIf="list$ | async as list">
+  <ng-container *ngIf="list.length; else emptyList">
+    <div *ngFor="let item of list">{{ item.name }}</div>
+  </ng-container>
+</ng-container>
+
+<ng-template #emptyList>
+  Pas de résultats
+</ng-template>
