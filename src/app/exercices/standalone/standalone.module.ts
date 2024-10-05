@@ -7,8 +7,6 @@ import {MatInput} from "@angular/material/input";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
 
-
-
 @NgModule({
   declarations: [
     StandaloneComponent

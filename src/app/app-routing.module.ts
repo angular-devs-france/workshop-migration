@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from "./technical/home/home.component";
+import {HomeComponent} from "./internals/home/home.component";
 import {ProductsResolver} from "./exercices-bonus/functional-resolver/products.resolver";
 
 const routes: Routes = [
@@ -26,11 +26,11 @@ const routes: Routes = [
   },
   {
     path: 'signals-state',
-    loadChildren: () => import('./exercices/signals-state/signals-state.routes').then(r => r.ROUTES)
+    loadComponent: () => import('./exercices/signals-state/signals-state.component').then(c => c.SignalsStateComponent)
   },
   {
     path: 'signals-search',
-    loadComponent: () => import('./exercices/signals-search/signals-search.component').then(c => c.SignalsSearchComponent)
+    loadComponent: () => import('./exercices-bonus/signals-search/signals-search.component').then(c => c.SignalsSearchComponent)
   },
   {
     path: 'functional-guard',
