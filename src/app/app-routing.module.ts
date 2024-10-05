@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'control-flow-switch',
-    loadComponent: () => import('./exercices/control-flow-switch/login-status.component').then(c => c.LoginStatusComponent)
+    loadComponent: () => import('./exercices-bonus/control-flow-switch/login-status.component').then(c => c.LoginStatusComponent)
   },
   {
     path: 'signals-introduction',
