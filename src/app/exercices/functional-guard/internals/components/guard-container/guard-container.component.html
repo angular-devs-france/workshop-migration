@@ -1,0 +1,20 @@
+<header class="flex justify-between">
+  <div class="flex items-center gap-8">
+    <a mat-icon-button routerLink="/functional-guard" aria-label="Home">
+      <mat-icon>home</mat-icon>
+    </a>
+    <a mat-button routerLink="authorized">Protected link</a>
+
+  </div>
+  <div>
+    @if (isLoggedIn$ | async) {
+      <button mat-stroked-button color="warn" (click)="logout()">Logout</button>
+    } @else {
+      <button mat-flat-button color="primary" (click)="login()">Login</button>
+    }
+  </div>
+</header>
+<main class="flex justify-center mt-20">
+  <router-outlet/>
+</main>
+

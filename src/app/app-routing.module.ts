@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./technical/home/home.component";
-import {AuthGuard} from "./exercices/functional-guard/auth.guard";
-import {ProductsResolver} from "./exercices/functional-resolver/products.resolver";
+import {ProductsResolver} from "./exercices-bonus/functional-resolver/products.resolver";
 
 const routes: Routes = [
   {
@@ -35,12 +34,11 @@ const routes: Routes = [
   },
   {
     path: 'functional-guard',
-    loadComponent: () => import('./exercices/functional-guard/functional-guard.component').then(c => c.FunctionalGuardComponent),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./exercices/functional-guard/auth.routes').then(r => r.AUTH_ROUTES),
   },
   {
     path: 'functional-resolver',
-    loadComponent: () => import('./exercices/functional-resolver/functional-resolver.component').then(c => c.FunctionalResolverComponent),
+    loadComponent: () => import('./exercices-bonus/functional-resolver/functional-resolver.component').then(c => c.FunctionalResolverComponent),
     resolve: {
       products: ProductsResolver
     }

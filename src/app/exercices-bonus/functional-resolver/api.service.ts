@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable, of} from "rxjs";
-import {Product} from "../signals-state/models/product.model";
+import {Product} from "../../exercices/signals-state/models/product.model";
 
 @Injectable({
   providedIn: 'root'

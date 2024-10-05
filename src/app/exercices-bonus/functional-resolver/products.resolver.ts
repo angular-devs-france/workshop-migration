@@ -1,7 +1,7 @@
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {Resolve} from "@angular/router";
-import {Product} from "../signals-state/models/product.model";
+import {Product} from "../../exercices/signals-state/models/product.model";
 import {ApiService} from "./api.service";
 
 @Injectable({
