@@ -1,9 +1,9 @@
-import {Component, inject} from '@angular/core';
-import {RouterLink, RouterOutlet} from "@angular/router";
-import {MatAnchor, MatButton, MatIconAnchor} from "@angular/material/button";
-import {AuthService} from "../../../auth.service";
-import {AsyncPipe} from "@angular/common";
-import {MatIcon} from "@angular/material/icon";
+import { Component, inject } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { MatAnchor, MatButton, MatIconAnchor } from '@angular/material/button';
+import { AuthService } from '../../../auth.service';
+import { AsyncPipe } from '@angular/common';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-guard-container',
@@ -16,8 +16,8 @@ import {MatIcon} from "@angular/material/icon";
     MatIcon,
     MatIconAnchor,
     MatAnchor,
-    RouterLink
-  ]
+    RouterLink,
+  ],
 })
 export class GuardContainerComponent {
   authService = inject(AuthService);

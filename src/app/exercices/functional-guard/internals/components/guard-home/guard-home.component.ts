@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './guard-home.component.html',
   standalone: true,
 })
-export class GuardHomeComponent {
-
-}
+export class GuardHomeComponent {}
