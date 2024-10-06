@@ -1,6 +1,6 @@
 <mat-form-field>
-  <mat-label>Search</mat-label>
-  <input matInput type="text" [formControl]="searchControl">
+  <mat-label>Recherche de fruits et légumes</mat-label>
+  <input matInput type="text" [formControl]="searchControl" />
 </mat-form-field>
 
 <ng-container *ngIf="list$ | async as list">
@@ -9,6 +9,4 @@
   </ng-container>
 </ng-container>
 
-<ng-template #emptyList>
-  Pas de résultats
-</ng-template>
+<ng-template #emptyList>Pas de résultats</ng-template>

@@ -19,3 +19,13 @@
     <p>Something went wrong. Please try again later.</p>
   </div>
 </div>
+
+<mat-form-field>
+  <mat-label>Sélectionner un statut : </mat-label>
+  <mat-select [(ngModel)]="loginStatus">
+    <mat-option value="loggedIn">loggedIn</mat-option>
+    <mat-option value="loggedOut">loggedOut</mat-option>
+    <mat-option value="loading">loading</mat-option>
+    <mat-option value="else">else</mat-option>
+  </mat-select>
+</mat-form-field>
