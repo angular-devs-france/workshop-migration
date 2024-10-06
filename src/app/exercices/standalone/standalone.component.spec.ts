@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { StandaloneComponent } from './standalone.component';
 
 describe('StandaloneComponent', () => {
@@ -8,9 +7,8 @@ describe('StandaloneComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [StandaloneComponent]
-    })
-    .compileComponents();
+      declarations: [StandaloneComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(StandaloneComponent);
     component = fixture.componentInstance;

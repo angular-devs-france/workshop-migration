@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
-import {RouterModule} from "@angular/router";
-import {StandaloneComponent} from "./standalone.component";
+import { RouterModule } from '@angular/router';
+import { StandaloneComponent } from './standalone.component';
+
+const routes = [{ path: '', component: StandaloneComponent }];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild([
-      {path: "", component: StandaloneComponent},
-    ])
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class StandaloneRoutingModule { }
+export class StandaloneRoutingModule {}
