@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './guard-authenticated.component.html',
 })
-export class GuardAuthenticatedComponent {
-
-}
+export class GuardAuthenticatedComponent {}

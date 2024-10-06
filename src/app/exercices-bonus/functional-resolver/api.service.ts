@@ -1,14 +1,12 @@
-import {Injectable} from "@angular/core";
-import {Observable, of} from "rxjs";
-import {Product} from "../../exercices/signals-state/internals/product.model";
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Product } from '../../exercices/signals-state/internals/product.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   getProducts(): Observable<Product[]> {
-    return of([
-      {id: 1, name: 'foo', price: 32}
-    ]);
+    return of([{ id: 1, name: 'foo', price: 32 }]);
   }
 }
