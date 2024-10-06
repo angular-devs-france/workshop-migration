@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import {NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
+import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatOption } from '@angular/material/core';
+import { MatSelect } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-status',
@@ -7,10 +11,15 @@ import {NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
   imports: [
     NgSwitch,
     NgSwitchCase,
-    NgSwitchDefault
+    NgSwitchDefault,
+    MatFormField,
+    MatOption,
+    MatSelect,
+    MatLabel,
+    FormsModule,
   ],
-  templateUrl: './login-status.component.html'
+  templateUrl: './login-status.component.html',
 })
 export class LoginStatusComponent {
-  loginStatus: string = 'loading';
+  loginStatus = 'loading';
 }
