@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StandaloneComponent } from './standalone.component';
-import {StandaloneRoutingModule} from "./standalone-routing.module";
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-import {MatInput} from "@angular/material/input";
-import {MatOption, MatSelect} from "@angular/material/select";
-import {ReactiveFormsModule} from "@angular/forms";
+import { StandaloneRoutingModule } from './standalone-routing.module';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatOption, MatSelect } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    StandaloneComponent
-  ],
+  declarations: [StandaloneComponent],
   imports: [
     CommonModule,
     StandaloneRoutingModule,
@@ -19,7 +17,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatSelect,
     MatOption,
     MatLabel,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class StandaloneModule { }
+export class StandaloneModule {}
