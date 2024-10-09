@@ -1,4 +1,4 @@
-import { AuthService } from './auth.service';
+import { AuthService } from './internals/auth.service';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
