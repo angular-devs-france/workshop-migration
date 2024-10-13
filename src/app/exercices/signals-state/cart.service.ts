@@ -15,8 +15,4 @@ export class CartService {
         product
       ]);
   }
-
-  removeItem(id: number) {
-    this.cartSubject.next(this.cartSubject.value.filter((item) => item.id !== id));
-  }
 }
