@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StandaloneComponent } from './standalone.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 describe('StandaloneComponent', () => {
   let component: StandaloneComponent;
@@ -8,6 +9,7 @@ describe('StandaloneComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [StandaloneComponent],
+      imports: [BrowserAnimationsModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(StandaloneComponent);
