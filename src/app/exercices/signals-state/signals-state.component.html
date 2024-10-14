@@ -1,4 +1,5 @@
-<header class="flex justify-end mb-4">
+<header class="flex items-center justify-end gap-4 mb-4">
+  <div>Total: {{totalPrice$ | async}}</div>
   @if (cart$ | async; as cart) {
     <a routerLink="cart" mat-icon-button [matBadge]="cart.length" aria-label="Shopping cart">
       <mat-icon>shopping_cart</mat-icon>

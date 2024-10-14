@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {CartService} from "./cart.service";
 import {Product} from "./internals/product.model";
 import {MatCard, MatCardActions, MatCardHeader} from "@angular/material/card";
@@ -7,6 +7,7 @@ import {RouterLink} from "@angular/router";
 import {MatIcon} from "@angular/material/icon";
 import {AsyncPipe} from "@angular/common";
 import {MatBadge} from "@angular/material/badge";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-signals-state',
@@ -24,9 +25,13 @@ import {MatBadge} from "@angular/material/badge";
     MatBadge
   ]
 })
-export class SignalsStateComponent {
+export class SignalsStateComponent implements OnInit{
   private cartService = inject(CartService);
-  cart$ = inject(CartService).cart$;
+  private snackbar = inject(MatSnackBar);
+
+  cart$ = this.cartService.cart$;
+  totalPrice$ = this.cartService.totalPrice$;
+
   products: Product[] = [
     {id: 1, name: 'Bananes', price: 30},
     {id: 2, name: 'Tomates', price: 20},
@@ -34,6 +39,16 @@ export class SignalsStateComponent {
     {id: 4, name: 'Orange', price: 10},
     {id: 5, name: 'Pomme', price: 5},
   ];
+
+  ngOnInit() {
+    this.cart$.pipe().subscribe((products) => {
+      if (products.length) {
+        this.snackbar.open('Produit ajouté au panier', '', {
+          duration: 1000,
+        });
+      }
+    });
+  }
 
   add(product: Product): void {
     this.cartService.addItem(product);
