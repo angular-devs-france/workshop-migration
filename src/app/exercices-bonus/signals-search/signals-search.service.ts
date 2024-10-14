@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {Observable, of} from "rxjs";
-import {Product} from "../../exercices/signals-state/internals/product.model";
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Product } from '../../exercices/signals-state/internals/product.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SignalsSearchService {
   data = [
@@ -17,10 +17,10 @@ export class SignalsSearchService {
   search(searchTerm: string): Observable<Product[]> {
     return searchTerm.length
       ? of(
-        this.data.filter((x) =>
-          x.name.toLowerCase().includes(searchTerm.toLowerCase())
+          this.data.filter((x) =>
+            x.name.toLowerCase().includes(searchTerm.toLowerCase())
+          )
         )
-      )
       : of(this.data);
   }
 }

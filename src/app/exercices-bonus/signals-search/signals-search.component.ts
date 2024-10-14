@@ -4,7 +4,7 @@ import { startWith, switchMap } from 'rxjs';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
-import {SignalsSearchService} from "./signals-search.service";
+import { SignalsSearchService } from './signals-search.service';
 
 @Component({
   selector: 'app-signals-search',

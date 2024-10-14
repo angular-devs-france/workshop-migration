@@ -1,13 +1,13 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {CartService} from "./cart.service";
-import {Product} from "./internals/product.model";
-import {MatCard, MatCardActions, MatCardHeader} from "@angular/material/card";
-import {MatButton, MatIconAnchor} from "@angular/material/button";
-import {RouterLink} from "@angular/router";
-import {MatIcon} from "@angular/material/icon";
-import {AsyncPipe} from "@angular/common";
-import {MatBadge} from "@angular/material/badge";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import { Component, inject, OnInit } from '@angular/core';
+import { CartService } from './cart.service';
+import { Product } from './internals/product.model';
+import { MatCard, MatCardActions, MatCardHeader } from '@angular/material/card';
+import { MatButton, MatIconAnchor } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
+import { AsyncPipe } from '@angular/common';
+import { MatBadge } from '@angular/material/badge';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signals-state',
@@ -22,10 +22,10 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     MatIcon,
     MatIconAnchor,
     AsyncPipe,
-    MatBadge
-  ]
+    MatBadge,
+  ],
 })
-export class SignalsStateComponent implements OnInit{
+export class SignalsStateComponent implements OnInit {
   private cartService = inject(CartService);
   private snackbar = inject(MatSnackBar);
 
@@ -33,15 +33,15 @@ export class SignalsStateComponent implements OnInit{
   totalPrice$ = this.cartService.totalPrice$;
 
   products: Product[] = [
-    {id: 1, name: 'Bananes', price: 30},
-    {id: 2, name: 'Tomates', price: 20},
-    {id: 3, name: 'Fraises', price: 20},
-    {id: 4, name: 'Orange', price: 10},
-    {id: 5, name: 'Pomme', price: 5},
+    { id: 1, name: 'Bananes', price: 30 },
+    { id: 2, name: 'Tomates', price: 20 },
+    { id: 3, name: 'Fraises', price: 20 },
+    { id: 4, name: 'Orange', price: 10 },
+    { id: 5, name: 'Pomme', price: 5 },
   ];
 
-  ngOnInit() {
-    this.cart$.pipe().subscribe((products) => {
+  ngOnInit(): void {
+    this.cart$.subscribe((products) => {
       if (products.length) {
         this.snackbar.open('Produit ajouté au panier', '', {
           duration: 1000,

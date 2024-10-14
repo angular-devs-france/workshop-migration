@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-signals-introduction',
   standalone: true,
-  imports: [
-    MatButton
-  ],
+  imports: [MatButton],
   templateUrl: './signals-introduction.component.html',
-  styles: [`
-    :host {
-      @apply flex flex-col items-center gap-4;
-    }
+  styles: [
+    `
+      :host {
+        @apply flex flex-col items-center gap-4;
+      }
 
-    button {
-      @apply min-w-32;
-    }
-  `]
+      button {
+        @apply min-w-32;
+      }
+    `,
+  ],
 })
 export class SignalsIntroductionComponent {
   count = 0;
