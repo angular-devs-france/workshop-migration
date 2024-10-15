@@ -30,7 +30,6 @@ export class SignalsStateComponent implements OnInit {
   private snackbar = inject(MatSnackBar);
 
   cart$ = this.cartService.cart$;
-  totalPrice$ = this.cartService.totalPrice$;
 
   products: Product[] = [
     { id: 1, name: 'Bananes', price: 30 },
@@ -52,5 +51,9 @@ export class SignalsStateComponent implements OnInit {
 
   add(product: Product): void {
     this.cartService.addItem(product);
+  }
+
+  getTotalPrice(products: Product[]): number {
+    return products.reduce((acc, product) => acc + product.price, 0);
   }
 }

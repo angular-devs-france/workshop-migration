@@ -1,6 +1,6 @@
 <header class="flex items-center justify-end gap-4 mb-4">
-  <div>Total: {{ totalPrice$ | async }}</div>
   @if (cart$ | async; as cart) {
+  <div>Total: {{ getTotalPrice(cart) }}</div>
     <a
       routerLink="cart"
       mat-icon-button
